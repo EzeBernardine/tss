@@ -1,9 +1,31 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-class NDIULO extends Document {
+import { ServerStyleSheet } from "styled-components";
+class TSS extends Document {
   static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const sheet = new ServerStyleSheet();
+    const originalRenderPage = ctx.renderPage;
+
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
+
+      const initialProps = await Document.getInitialProps(ctx);
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
   render() {
@@ -13,11 +35,7 @@ class NDIULO extends Document {
           <meta property="og:type" content="website" />
           <meta property="og:title" content=" tss" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
-            rel="stylesheet"
-            type="text/css"
-          />
+
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&display=swap"
@@ -33,4 +51,4 @@ class NDIULO extends Document {
   }
 }
 
-export default NDIULO;
+export default TSS;

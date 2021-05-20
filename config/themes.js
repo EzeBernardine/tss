@@ -7,81 +7,22 @@ const palette = {
     white,
   },
   primary: {
-    teal: "#02AAB0",
-    darkTeal: "#005D67",
-    Spearmint: " #85FFC7",
-    Aqua: "#45D1D6",
-    offWhite: "#E8F7F7",
-    seaGreen: "#00B3AA",
-    background: "#01969E",
-    background: "#08163E",
-    background: "#E0E2EA",
+    main: "#1E6700",
+    light: "#1E6700",
     white: white,
   },
-  error: {
-    main: "#e73939",
-    light: "#FFF3EE",
-    dark: "#9c2e2e ",
-    contrastText: white,
-  },
-  success: {
-    main: "#17e904",
-    light: "#cff0cc61",
-    dark: "#366936",
-    contrastText: white,
-  },
-  warning: {
-    main: "#dcdc2c",
-    light: "#f3f3d0",
-    dark: "#787836",
-    contrastText: white,
-  },
-  info: {
-    main: "#2136e5b3",
-    light: "#e4f3fe",
-    dark: "#313174",
-    contrastText: white,
-  },
   grey: {
-    medium: "#E4E4E4",
-    dark: "#666666",
-    green: "#B1E4DC",
-    light: "#F4F4F4",
+    main: "#707070",
   },
-};
-
-const shadows = {
-  0: "none",
 };
 
 const typography = {
-  fontFamily: '"Fira Sans", sans-serif',
-  fontWeightLight: 300,
-  fontWeightRegular: 400,
-  fontWeightMedium: 500,
-  fontWeightBold: 700,
-};
-
-const zIndex = {
-  mobileStepper: 1000,
-  speedDial: 1050,
-  appBar: 1100,
-  drawer: 1200,
-  modal: 1300,
-  snackbar: 1400,
-  tooltip: 1500,
+  fontFamily: 'Regular,"Fira Sans", sans-serif',
 };
 
 export const spacing = {
-  none: 0,
-  xxsmall: "4px",
-  xsmall: "8px",
-  small: "12px",
-  medium: "20px",
-  gutter: "24px",
-  large: "32px",
-  xlarge: "48px",
-  xxlarge: "96px",
+  xxsmall: "5px",
+  large: "47px",
 };
 
 export const fontSizes = {
@@ -92,17 +33,17 @@ export const fontSizes = {
   large: "1.125rem", //18px
   xlarge: "1.25rem", //20px
   xxlarge: "1.375rem", //22px
+  large60: "2.75rem", //52px
 };
 
 const shape = {
   borderRadius: spacing["xxsmall"],
+  largeBorderRadius: spacing["large"],
 };
 
 export const theme = {
   palette,
-  shadows,
   typography,
-  zIndex,
   shape,
   fontSizes,
   spacing,

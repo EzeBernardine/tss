@@ -28,15 +28,7 @@ a {
   cursor: pointer;
 }
 
-p {
-  letter-spacing: 0.00938em;
-  font-size: 1rem;
-}
-
-span {
-  letter-spacing: 0.01071em;
-  font-size: 0.875rem;
-}
+ 
 
 a {
   text-decoration: none;
