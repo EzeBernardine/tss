@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+body {
+  transition: all 0.25s linear;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+button {
+  border: none;
+  background-color: transparent;
+}
+button,
+a {
+  cursor: pointer;
+}
+
+p {
+  letter-spacing: 0.00938em;
+  font-size: 1rem;
+}
+
+span {
+  letter-spacing: 0.01071em;
+  font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: 700;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
