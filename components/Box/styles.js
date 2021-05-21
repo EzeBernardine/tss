@@ -41,3 +41,17 @@ export const Grid = styled("div")`
     min-width: 0;
   }
 `;
+
+export const Frame = styled("div")`
+  width: ${({ width }) => (width ? width : "100%")};
+  height: ${({ height }) => (height ? height : "100%")};
+  border-radius: ${({ rounded }) => (rounded ? '100%' : "0")};
+  overflow: hidden;
+  position: relative;
+  & > img {
+    min-width: 0;
+    object-fit: ${({ object }) => (object ? object : "cover")};
+    width: 100%;
+    height: 100%;
+  }
+`;

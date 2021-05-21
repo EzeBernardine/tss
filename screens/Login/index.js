@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-import Image from "next/image";
-import { Flex, Grid } from "../../components/Box/styles";
+import Image from "../../public/Assets/Kwaralogo.png";
+import { Flex, Grid, Frame } from "../../components/Box/styles";
 import Button from "../../components/Button";
 import {
   ImageFrame,
@@ -46,11 +46,9 @@ const LogIn = () => {
             wrap="no-wrap"
             margin="0 0 0 83px"
           >
-            <Image
-              src="/../public/Assets/Kwaralogo.png"
-              width="193"
-              height="193"
-            ></Image>
+            <Frame object="contain" width="193px" height="193px">
+              <img src={Image} alt="logo" />
+            </Frame>
 
             <Title>The Kwara State Government</Title>
           </LogoAndName>
